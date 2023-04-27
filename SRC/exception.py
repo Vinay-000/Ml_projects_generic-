@@ -1,5 +1,6 @@
 import sys 
 import logging
+from SRC import logger
 # import logger
 
 def error_message_detail(error,error_detail:sys):
@@ -21,11 +22,11 @@ class CustomException(Exception):
         return self.error_message
 
 
-if __name__ =="__main__":
+# if __name__ =="__main__":
 
-    try:
-        a = 1 / 0
-    except Exception as e :
-        logging.info("Divided by Zero ")
-        raise CustomException(e,sys)
+#     try:                                    # This part of code is used to test if the exception is working or not. 
+#         a = 1 / 0                           # In real project this is not used
+#     except Exception as e :
+#         logging.info("Divided by Zero ")
+#         raise CustomException(e,sys)
         
